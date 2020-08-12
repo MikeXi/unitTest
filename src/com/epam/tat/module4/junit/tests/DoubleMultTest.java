@@ -37,10 +37,10 @@ public class DoubleMultTest {
     @Parameters
     public static Collection<Object[]> data(){
         return Arrays.asList(new Object[][]{
-                {1.0, 2.6, 2},
+                {1.0, 2.6, 2.6},
                 {2.5, 5.6, 14},
-                {3.3, 1.4, 4},
-                {2.1, 2.5, 5},
+                {3.3, 1.4, 4.62},
+                {2.1, 2.5, 5.25},
                 {2.1, 0, 0}
         });
     }
@@ -48,6 +48,6 @@ public class DoubleMultTest {
     @Test
     public void testDoubleMult(){
         double result = cal.mult(a,b);
-        assertEquals(expected,result,0.0);
+        assertEquals(expected,result,0.01);
     }
 }

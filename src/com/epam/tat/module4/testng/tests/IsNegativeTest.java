@@ -6,14 +6,14 @@ import org.testng.Assert;
 
 public class IsNegativeTest extends BaseCalculatorTest{
 
-    @Test(groups = "boolean", dependsOnGroups = "double")
+    @Test(groups = "boolean", dependsOnGroups = "double",alwaysRun = true)
     public void testIsNegitive(){
         checkTime();
         boolean result = calculator.isNegative(-4);
         Assert.assertTrue(result);
     }
 
-    @Test(groups = "boolean", dataProvider = "valuesForIsNegative", dependsOnGroups = "double")
+    @Test(groups = "boolean", dataProvider = "valuesForIsNegative", dependsOnGroups = "double",alwaysRun = true)
     public void testIsNotNegative(long a){
         checkTime();
         boolean result = calculator.isNegative(a);

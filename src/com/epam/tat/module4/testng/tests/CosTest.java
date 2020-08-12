@@ -15,11 +15,11 @@ public class CosTest extends  BaseCalculatorTest{
     @DataProvider(name = "valuesForCos")
     public Object[][] dataProvider(){
         return new Object[][]{
-                {0,0},
-                {30, -0.98},
-                {45, 0.85},
-                {180, -0.8},
-                {360, 0.95}
+                {0,1},
+                {30, 0.15},
+                {45, 0.53},
+                {180, -0.6},
+                {360, -0.28}
         };
     }
 }

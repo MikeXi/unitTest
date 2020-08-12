@@ -35,22 +35,17 @@ public class TgTest {
     @Parameters
     public static Collection<Object[]> data(){
         return Arrays.asList(new Object[][]{
-                {30, 1},
-                {45, 1},
-                {180, 1},
-                {360, 1}
+                {30, -6.4},
+                {180, 1.34},
+                {360, -3.38},
+                {0,0}
         });
     }
 
     @Test
     public void testTg(){
         double result = cal.tg(a);
-        assertEquals(expected,result,0.1);
+        assertEquals(expected,result,0.01);
     }
 
-    @Test
-    public void testTgWithZero(){
-        double result = cal.tg(0);
-        assertTrue(Double.isNaN(result));
-    }
 }
